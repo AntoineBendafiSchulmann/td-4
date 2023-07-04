@@ -24,11 +24,15 @@ jobs:
           node-version: ${{ matrix.node-version }}
           registry-url: 'https://registry.npmjs.org'
       - name: 'Install dependencies'
-        run: npm install
+        run: npm ci
       - name: 'Run eslint'
         run: ./node_modules/.bin/eslint .
       - name: 'Run tests'
         run: npm test
+      - name: 'Set up Git user'
+        run: |
+          git config --global user.email "bendafischulmann@gmail.com"
+          git config --global user.name "Antoine Bendafi-Schulmann"
       - name: 'Bump version and publish'
         run: |
           npm version patch

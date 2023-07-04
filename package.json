@@ -1,11 +1,16 @@
 {
   "name": "oss-td4",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a random package",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
+
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.44.0",
+    "jest": "^29.5.0"
+  }
 }
